@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+
+  <title>Dynamic Vehicles!</title>
+  <link href='project1.css' rel='stylesheet'>
+  <script src='browserDetect.js'></script>
+  <script src='cookies.js'></script>
+  <script src='akash.js'></script>
+  <script type='text/javascript'>
+      var message="Type your name- No funny business!";
+        var pos=0;
+        var maxlength=message.length+1;
+        
+        function writemsg()
+        {
+        if (pos<maxlength)
+            {
+            txt=message.substring(pos,0);
+            
+            txt1=message.substring(pos,0);
+            document.getElementById('validateText1').value=txt;
+            
+            document.getElementById('validateText2').value=txt1;
+            pos++;
+            timer=setTimeout("writemsg()",50);
+            }
+        }
+        function stoptimer()
+        {
+        clearTimeout(timer);
+        }
+
+        
+  </script>
+</head>
+
+<body onload="init(); writemsg();" onunload="stoptimer()">
+  <div id="box">
+    <h1>Dynamic Vehicles!</h1>
+	<hr />
+
+    <form>
+      <div id="DynamicSelect"></div>
+      <!-- div to print out final result in a new node -->
+	<hr />
+      <div id="FlushContent"></div>
+    </form><!-- 
+         <form id="nameForm">
+            Enter your name: <input type = "text" id = "validateText" placeholder ="Akash" required="true"/>
+            <input type = "submit" onclick = "validate();"/>
+         </form> -->
+    <!-- div enclosing the form-->
+
+    <div id="formInfo">
+      <form action="#">
+        <fieldset>
+          <legend>Akash's form</legend>
+
+          <p><label for="First name">Name:</label> <input id="validateText1"
+          placeholder="Akash" required="true" type="text"></p>
+
+          <p><label for="Last name">Name:</label> <input id="validateText2"
+          placeholder="Moothedath" required="true" type="text"></p>
+
+          <p class="submit"><input onclick="validate();" type="submit" value=
+          "Submit"></p>
+        </fieldset>
+      </form>
+    </div><!--div enclosing the error message for validating the form field-->
+
+    <div id="errormsg"></div><!--script for browser detection-->
+    <script>
+        document.write("<div id='footer'>");
+            document.write("<hr />");
+            document.write("<p>You are currently using: " + "<strong><em>" +BrowserDetect.browser + " " + BrowserDetect.version + "<\/em><\/strong>" +"<p>");
+            if(BrowserDetect.browser == 'Explorer' && BrowserDetect.version < 8){
+                window.location.assign("http://windows.microsoft.com/en-us/internet-explorer/ie-10-worldwide-languages");
+            }
+            else if(BrowserDetect.browser == 'Firefox' && BrowserDetect.version < 24){
+                window.location.assign('http://www.mozilla.org/en-US/firefox/beta/');
+            }
+            else if(BrowserDetect.browser== 'Chrome' && BrowserDetect.version < 23){
+                window.location.assign('http://www.neowin.net/news/google-chrome-30-is-out-download-now');
+            }
+            else if(BrowserDetect.browser== 'Safari'){
+                window.location.assign('http://www.neowin.net/news/google-chrome-30-is-out-download-now');
+            }
+                
+            else{
+                    document.write("<p>Hooray! Your browser is up to date!<\/p>");
+                }
+            document.write("<\/div>");
+    </script>
+  </div>
+</body>
+</html>

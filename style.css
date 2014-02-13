@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #50696b;
+  position: relative;
+}
+
+#box {
+  background-color: #FFF;
+  width: 850px;
+  -webkit-box-shadow: 2px 2px 19px rgba(41,68,50,0.92);
+  -moz-box-shadow: 2px 2px 19px rgba(41,68,50,0.92);
+  box-shadow: 2px 2px 19px rgba(41,68,50,0.92);
+  margin: 20px auto auto;
+  padding: 0 0 350px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lucida Sans Unicode";
+  font-size: 20pt;
+}
+
+#DynamicSelect {
+  text-align: center;
+  line-height: 5;
+  font-family: "Lucida Sans Unicode";
+  font-size: 12pt;
+}
+
+#footer {
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-top: auto;
+  text-align: center;
+  width: 850px;
+  height: 60px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  bottom: 0;
+}
+
+p {
+  text-align: center;
+  font-family: "Lucida Sans Unicode";
+  font-size: 12pt;
+}
+
+#errormsg {
+  font-family: "Lucida Sans Unicode";
+  font-size: 12pt;
+  text-align: center;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-top: auto;
+  text-align: center;
+  width: 850px;
+  height: 60px;
+  position: absolute;
+  bottom: 50px;
+}
+
+#formInfo {
+  float: left;
+  margin-left: 290px;
+  margin-top: 150px;
+}
+
+label {
+  width: 4em;
+  float: left;
+  text-align: right;
+  margin-right: .5em;
+  display: block;
+}
+
+.submit input {
+  margin-left: 4.5em;
+}
+
+input {
+  color: #FFF;
+  background: #50696b;
+  border: 1px solid #781351;
+}
+
+.submit input {
+  color: #000;
+  background: #ffa20f;
+  border: 2px outset #d7b9c9;
+}
+
+fieldset {
+  border: 1px solid #781351;
+  width: 20em;
+}
+
+legend {
+  color: #fff;
+  background: #ffa20c;
+  border: 1px solid #781351;
+  padding: 2px 6px;
+}
+
+#FlushContent {
+  text-align: center;
+  font-family: "Lucida Sans Unicode";
+  font-size: 12pt;
+  width: 850px;
+  height: 60px;
+  position: absolute;
+  bottom: 240px;
+}
